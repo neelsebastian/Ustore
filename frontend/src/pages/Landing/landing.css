@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.landing {
+  width: 100%;
+}
+
+.landing-bg {
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+
+.landing-bg .landing-video {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.landing-bg .landing-bg-text {
+  width: 100%;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px);
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.landing-bg .landing-bg-text h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 13rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(270deg, #ff3f6c, #ff7eb3, #ffca3a, #00c3ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s ease infinite;
+  letter-spacing: 6px;
+  text-shadow: 0 0 30px rgba(255, 63, 108, 0.3);
+}
+
+.shop-by-cat {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #f9f9f9, #ffffff);
+  gap: 2rem;
+}
+
+.shop-by-cat h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.shop-by-cat h1::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff3f6c, #ff7eb3);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.shop-by-cat .category-container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.2rem;
+  padding: 0 1rem;
+}
+
+.category-box {
+  width: 220px;
+  height: 260px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgb(218, 215, 215);
+}
+
+.category-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.4s ease;
+}
+
+.category-box:hover::before {
+  left: 100%;
+}
+
+.category-box:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(255, 63, 108, 0.2);
+}
+
+.cat-img {
+  width: 180px;
+  height: 180px;
+  margin: 20px auto 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #fff 40%, #f1f1f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.cat-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.category-box:hover .cat-img {
+  transform: scale(1.1);
+}
+
+.category-box p {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 8px;
+  transition: color 0.3s ease;
+}
+
+.category-box:hover p {
+  color: #ff3f6c;
+}
+.landing-section3 {
+  width: 100%;
+  height: 670px;
+  padding: 1.5rem 3rem;
+  display: flex;
+  gap: 50px;
+}
+.landing-section3 .best-quality h3,
+.best-discounts h3 {
+  padding: 15px 0px;
+  color: #222;
+}
+.landing-section3 .best-quality-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+}
+.best-quality-products .products-box {
+  width: 220px;
+  height: 260px;
+  background: #fff;
+  border-radius: 16px;
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgb(218, 215, 215);
+  padding: 10px;
+}
+.best-quality-products .products-box p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 8px;
+  transition: color 0.3s ease;
+}
+.products-box .products-box-img {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #fff 40%, #f1f1f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+.products-box .products-box-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.best-quality-products .products-box:hover .products-box-img {
+  transform: scale(1.1);
+}
+.best-quality-products .products-box .p-bold {
+  color: #ff3f6c;
+  font-weight: 600;
+}
+.landing-section3 .landing3-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.landing-section3 .landing3-banner {
+  position: relative;
+  cursor: pointer;
+}
+.landing-section3 .landing3-banner .banner-content {
+  position: absolute;
+  margin: 20px;
+  top: 0;
+}
+.banner-content .banner-content1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #333;
+  color: #47605e;
+}
+.banner-content .banner-content2 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+.banner-content .banner-btn button {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #47605e;
+  color: #fff;
+  margin-top: 15px;
+  text-align: start;
+  padding-left: 15px;
+  position: relative;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.banner-btn .fa-chevron-right {
+  position: absolute;
+  top: 160px;
+  left: 85px;
+  font-size: 14px;
+  color: #fff;
+}
+.banner-content .banner-btn button:hover {
+  transform: scale(1.02);
+}
+.landing-section4 {
+  height: 500px;
+  margin: 0 auto; 
+  overflow: hidden;
+  position: relative;
+}
+
+.landing-section4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block; /* removes any inline gap from default inline behavior */
+}
+.landing-section4 button {
+  position: absolute;
+  top: 23.5rem;
+  left: 18rem;
+  width: 150px;
+  height: 43px;
+  border: none;
+  border-radius: 8px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.landing-section4 button:hover {
+  transform: scale(1.03);
+}

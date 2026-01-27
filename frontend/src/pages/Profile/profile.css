@@ -1,0 +1,235 @@
+.profile {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0e7ff, #fdf2f8, #f5f3ff);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+.profile-main-container {
+  width: 70%;
+  margin: 70px auto;
+  background: rgb(214, 214, 214);
+  background: linear-gradient(135deg, #d5d0f4, #e7c6d9, #ccd5f1);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+}
+
+.profile-main-container h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 1.25rem;
+  font-size: 2.5rem;
+}
+
+.edit-details-box,
+.profile-address-block,
+.profile-privacy {
+  margin-bottom: 1.6rem;
+  padding: 1.25rem;
+  border: 1px solid #eef2f7;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.edit-details-box p,
+.profile-address-block p,
+.profile-privacy p {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.9rem;
+}
+
+.profile-name-block {
+  display: flex;
+  gap: 12px;
+}
+
+.profile-name-block input,
+.profile-privacy input,
+.profile-addresses input,
+.edit-details-box input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  outline: none;
+  background: #fbfcfe;
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 15px;
+}
+
+.profile-btn1,
+.save-btn,
+.cancel-btn,
+.confirm-yes,
+.confirm-no {
+  background-color: #ff3f63;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+.confirm-yes,
+.confirm-no {
+  width: 100px;
+}
+.cancel-btn,
+.confirm-no {
+  background-color: #f3f4f6;
+  color: #111827;
+  border: 1px solid #bfc0c2;
+}
+
+.save-btn {
+  background-color: #018a63;
+}
+
+.profile .profile-btn1:hover {
+  background-color: #f83559;
+  transform: scale(1.02);
+}
+
+.profile-addresses {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #f1f5f9;
+}
+
+/* name and phone row */
+.profile-sub-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name-addr-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.name-addr-box .name {
+  font-weight: 600;
+  color: #0f172a;
+  margin-right: 8px;
+}
+
+.name-addr-box .phone {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* full address text */
+.profile-addresses .full-address {
+  color: #374151;
+  margin-bottom: 14px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.profile .profile-address-block .no-addr {
+  font-size: 15px;
+}
+
+/* edit and delete buttons */
+.profile-edit-btns {
+  display: flex;
+  gap: 20px;
+}
+.profile-edit-btns .edit-btn,
+.profile-edit-btns .delete-btn {
+  width: 120px;
+  height: 35px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.profile-edit-btns .edit-btn:hover {
+  background-color: #333;
+  border: none;
+  color: white;
+}
+.profile-edit-btns .delete-btn:hover {
+  background-color: rgb(237, 28, 28);
+  border: none;
+  color: white;
+}
+
+/* Edit address form layout: two-column grid */
+.address-edit-form {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #e6eef8;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* actions inside edit form */
+.edit-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 20px 22px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.15);
+  text-align: center;
+}
+
+.modal-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+}
+.profile .profile-btn2 {
+  width: 29.5rem;
+  display: block;
+}
+
+/* small responsive tweaks */
+@media (max-width: 700px) {
+  .profile-main-container {
+    padding: 1rem;
+  }
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+  .name-addr-box {
+    gap: 8px;
+  }
+}

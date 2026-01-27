@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.coupons {
+  background: linear-gradient(135deg, #a5c4e6, #9bbbe1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.coupons h1 {
+  margin: 30px 40px;
+  border-bottom: 5px solid #ed733c;
+  border-radius: 5px;
+  padding: 0px 15px;
+  padding-bottom: 10px;
+  font-size: 40px;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.coupons .coupons-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.coupons .coupon-image {
+  width: 100%;
+  max-width: 260px;
+  background-color: #fff;
+  border: 1px solid #cbd5e1;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.coupons .coupon-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.coupons .coupon-image:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.coupons .coupon-image p {
+  color: #333;
+  font-size: 15px;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.coupons .coupon-image b {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.coupons .coupon-image span {
+  color: #ed733c;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.coupons .coupon-image::before {
+  content: "Exclusive";
+  position: absolute;
+  top: 12px;
+  left: -40px;
+  background-color: #ed733c;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 50px;
+  transform: rotate(-45deg);
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .coupons h1 {
+    font-size: 2rem;
+  }
+
+  .coupons .coupons-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+.coupons .coupon-image.expired {
+  position: relative;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+
+.coupons .coupon-image.expired::after {
+  content: "EXPIRED";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.1);
+  color: #ed733c;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+.coupons .coupon-image.expired:hover {
+  transform: none;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  cursor: not-allowed;
+    transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login {
+  width: 100%;
+  background: linear-gradient(135deg, #d5d0f4, #e7c6d9, #ccd5f1);
+  background-image: url('login-bg.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.login .login-container {
+  width: 400px;
+  height: 430px;
+  border: 1px solid rgb(221, 216, 216);
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.11);
+  margin: 70px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  background-color: #fff;
+  /* margin-bottom: 120px; */
+}
+.login .login-container h1 {
+  color: #222;
+  letter-spacing: 2px;
+  padding: 8px 0px;
+  margin-bottom: 15px;
+  font-family: 'Lora', serif;
+}
+.login-container .login-input1 {
+  position: relative;
+}
+.login-container .login-email {
+  margin-bottom: 12px;
+}
+.login-container .login-input1 input {
+  width: 20rem;
+  height: 50px;
+  border: 1px solid rgb(162, 156, 156);
+  border-radius: 6px;
+  padding-left: 39px;
+  color: #333;
+  outline: none;
+}
+.login-container .login-input1 .fa-solid {
+  position: absolute;
+  font-size: 14px;
+  color: #4e4b4b;
+}
+.login-container .login-input1 .fa-envelope,
+.login-container .login-input1 .fa-lock {
+  top: 17px;
+  left: 12px;
+}
+.login-container .login-input2 {
+  display: flex;
+  width: 20rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 0px 2px;
+}
+.login-input2 .remember-check {
+  display: flex;
+  gap: 6px;
+}
+.login-input2 .remember-check input {
+  cursor: pointer;
+}
+.login-container .login-input2 p {
+  color: #ff3f6c;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.login-container .login-btn {
+  width: 20rem;
+  height: 50px;
+  background-color: #ff3f6c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.login-container .login-btn:hover {
+  transform: scale(1.011);
+  box-shadow: 0 4px 8px 0 rgba(14, 106, 227, 0.2),
+    0 6px 20px 0 rgba(14, 106, 227, 0.19);
+}
+.login-container .login-lower-signup {
+  font-size: 14px;
+}
+.login-container span {
+  color: #ff3f6c;
+  font-weight: 500;
+  cursor: pointer;
+}
+.login-container .login-redirect a {
+  color: #ff3f6c;
+  text-decoration: none;
+  font-weight: 600;
+}

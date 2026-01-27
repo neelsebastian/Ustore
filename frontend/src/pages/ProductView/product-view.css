@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.product-view {
+  width: 100%;
+}
+.product-view-container {
+  width: 100%;
+  display: flex;
+}
+.product-view-container .product-view-container-left {
+  width: 40%;
+  padding: 70px 80px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.product-view-container-left .container-left-box1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-view-container-left .container-left-box1 .preview-box {
+  width: 25%;
+  min-height: 400px;
+}
+.product-view-container-left .container-left-box1 .preview-box img {
+  width: 100%;
+  height: 100px;
+}
+.product-view-container-left .container-left-box1 .product-image {
+  width: 75%;
+  min-height: 400px;
+}
+.product-view-container-left .container-left-box1 .product-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: fill;
+}
+.product-view-container-left .container-left-box2 {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.product-view-container-left .container-left-box2 button {
+  width: 100%;
+  height: 60px;
+  border: none;
+  background-color: #ff3f6c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.product-view-container-left .container-left-box2 button:hover {
+  transform: scale(1.011);
+  box-shadow: 0 4px 8px 0 rgba(14, 106, 227, 0.2),
+    0 6px 20px 0 rgba(14, 106, 227, 0.19);
+}
+.product-view-container .product-view-container-right {
+  width: 60%;
+  padding: 70px 20px;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.product-view-container .product-view-container-right p {
+  color: #333;
+}
+.product-view-container .product-view-container-right .price {
+  color: #ff3f6c;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.preview-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 15px;
+}
+
+.preview-box img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.preview-box img:hover {
+  transform: scale(1.05);
+}
+
+.preview-box img.active-preview {
+  border: 2px solid #ff3f6c;
+}
+
+.product-image img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.size-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.size-box-small {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.size-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.active-size {
+  border-color: #ff3f6c;
+  color: #ff3f6c;
+  background-color: #ffe5eb;
+  transform: scale(1.05);
+}
+
+.blur-size {
+  opacity: 0.5;
+}
+
+.blur-size:hover {
+  opacity: 0.8;
+}
+.product-view-container-right .coupon-box .coupon1,
+.bank-offers-box .bank-offer-head {
+  font-weight: 600;
+}
+.product-view-container-right .coupon-box .coupon-box-sub {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0px;
+}
+.coupon-box-sub .fa-ticket-simple {
+  color: #156cf5;
+}
+.bank-offers-box .bank-offer-box-sub {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0px;
+}
+.bank-offers-box .bank-offer-box-sub .fa-money-check-dollar {
+  color: #156cf5;
+}
